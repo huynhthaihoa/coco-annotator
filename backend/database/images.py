@@ -129,7 +129,7 @@ class ImageModel(DynamicDocument):
         path = '/' + os.path.join(*folders)
         directory = os.path.dirname(path)
 
-        if not os.path.exists(directory):
+        if os.path.exists(directory) is False:
             os.makedirs(directory)
         
         return path
