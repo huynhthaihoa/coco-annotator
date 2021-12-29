@@ -113,7 +113,8 @@ def export_annotations(task_id, dataset_id, categories):
 
     timestamp = time.time()
     directory = f"{dataset.directory}.exports/"
-    file_path = f"{directory}coco-{timestamp}.json"
+    #file_path = f"{directory}coco-{timestamp}.json"
+    file_path = f"{directory}{dataset.name}.json"
 
     if not os.path.exists(directory):
         os.makedirs(directory)
